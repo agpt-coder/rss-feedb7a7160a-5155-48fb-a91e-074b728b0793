@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "rss-feed"
+version = "0.1.0"
+description = "Based on the requirements and responses gathered, to build an endpoint that parses RSS XML and returns a structured JSON representation, the following steps need to be implemented: 1. Use the 'feedparser' library to parse the RSS XML from a provided URL. This library will handle the extraction of feed metadata and item (article) details including titles and links which are required for navigating the content efficiently. 2. Once the RSS XML is parsed, employ best practices for converting XML to JSON, such as using 'xmltodict' for parsing and the 'json' module for conversion, ensuring proper handling of namespaces, attributes, arrays, and objects, and extensively testing the conversion process. 3. With the data converted into a structured JSON format, the endpoint will return this JSON, making the RSS feed content more accessible and easier to integrate with other applications or services. This process will be implemented using Python, taking advantage of its rich ecosystem of libraries for XML parsing and JSON conversion, and ensuring a streamlined and effective workflow for consuming RSS feed content."
+authors = ["AutoGPT <info@agpt.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = "*"
+feedparser = "^6.0.8"
+prisma = "*"
+pydantic = "*"
+uvicorn = "*"
+xmltodict = "^0.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
